@@ -1,5 +1,5 @@
 <?php
-require 'function.php';
+require 'conection.php';
 require 'val.php';
 ?>
 

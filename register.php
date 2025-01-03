@@ -1,5 +1,5 @@
 <?php 
-require 'function.php';
+require 'conection.php';
 
 // Proses registrasi
 if (isset($_POST['register'])) {
