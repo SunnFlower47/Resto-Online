@@ -1,0 +1,123 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 0; 
+
+#layoutAuthentication {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 2px solid #dc3545; 
+    border-radius: 8px;
+    width: 100%; 
+    max-width: 400px; 
+    margin: 0 auto; 
+}
+
+.card-header {
+    background-color: #dc3545; 
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.card-header h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-footer {
+    background-color: #ffffff; 
+    text-align: center;
+    padding: 10px;
+}
+
+.card-footer .small a {
+    color: #dc3545; 
+    text-decoration: none;
+}
+
+.card-footer .small a:hover {
+    text-decoration: underline;
+}
+
+.form-group {
+    margin-bottom: 15px; 
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px 12px; 
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #dc3545; 
+}
+
+.alert {
+    background-color: #f8d7da; 
+    color: #721c24; 
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.btn {
+    background-color: #dc3545; 
+    color: white;
+    padding: 8px 15px; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #c82333; 
+}
+
+.small {
+    font-size: 14px;
+}
+
+.small a {
+    color: #dc3545; 
+    text-decoration: none;
+}
+
+.small a:hover {
+    text-decoration: underline;
+}
+}
