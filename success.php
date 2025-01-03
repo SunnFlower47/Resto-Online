@@ -24,12 +24,12 @@
             text-align: center;
             max-width: 400px;
             width: 100%;
-            border: 2px solid #dc3545;  /* Border merah */
+            border: 2px solid #dc3545;  
         }
 
         h1 {
             font-size: 28px;
-            color: #dc3545;  /* Merah untuk judul */
+            color: #dc3545;  
         }
 
         p {
@@ -40,7 +40,7 @@
 
         a {
             text-decoration: none;
-            background-color: #dc3545;  /* Merah untuk tombol */
+            background-color: #dc3545;  
             color: white;
             padding: 10px 20px;
             border-radius: 4px;
@@ -51,7 +51,7 @@
         }
 
         a:hover {
-            background-color: #c82333;  /* Merah lebih gelap saat hover */
+            background-color: #c82333;  
         }
     </style>
 </head>
@@ -63,3 +63,4 @@
     </div>
 </body>
 </html>
+       >

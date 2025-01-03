@@ -1,8 +1,7 @@
 <?php
-// Koneksi ke database
-require 'conection.php';  // Pastikan file 'function.php' berisi koneksi ke database
 
-// Jika form disubmit
+require 'conection.php';  
+
 if (isset($_POST['submit-checkout'])) {
     // Ambil data dari form
     $full_name = $_POST['full-name'];
@@ -24,7 +23,7 @@ if (isset($_POST['submit-checkout'])) {
         echo "Error: " . $stmt->error;
     }
 
-    // Tutup koneksi
+
     $stmt->close();
     $con->close();
 }
