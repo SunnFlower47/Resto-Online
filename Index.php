@@ -1,6 +1,8 @@
 <?php
 require 'conection.php';
 require 'val.php';
+
+
 ?>
 
 <!DOCTYPE html>

@@ -1,27 +1,27 @@
 <?php 
 require 'conection.php';
 
-// Proses registrasi
+
 if (isset($_POST['register'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
     $confirmPassword = $_POST['confirmPassword'];
 
-    // Validasi input
+
     if (empty($email) || empty($password) || empty($confirmPassword)) {
         $error = "All fields are required";
     } elseif ($password !== $confirmPassword) {
         $error = "Passwords do not match";
     } else {
-        // Cek apakah email sudah terdaftar
+
         $cekdatabase = mysqli_query($con, "SELECT * FROM login WHERE email = '$email'");
         if (mysqli_num_rows($cekdatabase) > 0) {
             $error = "Email already exists";
         } else {
-            // Enkripsi password
+
             $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-            // Simpan ke database
+
             $query = mysqli_query($con, "INSERT INTO login (email, password) VALUES ('$email', '$hashedPassword')");
 
             if ($query) {

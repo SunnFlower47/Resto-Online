@@ -1,19 +1,19 @@
 <?php
 require 'conection.php';
 
-//cek login, terdaftar atau tidak
+
 
 
 if (isset($_POST['login'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    // Query untuk memeriksa apakah email ada di database
+    
     $cekdatabase = mysqli_query($con, "SELECT * FROM login WHERE email = '$email'");
     $data = mysqli_fetch_assoc($cekdatabase);
 
     if ($data && password_verify($password, $data['password'])) {
-        // Login berhasil, set sesi dan simpan email ke sesi
+        
         $_SESSION['log'] = 'true';
         $_SESSION['user_email'] = $email; // Menyimpan email ke sesi
         header("location: index.php");
@@ -21,7 +21,7 @@ if (isset($_POST['login'])) {
     } else {
         $error = "Invalid email or password.";
         header("location: login.php?error=" . urlencode($error));
-        exit(); // Pastikan ada exit setelah header untuk menghentikan script lebih lanjut
+        exit(); 
     }
 }
 
