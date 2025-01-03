@@ -148,8 +148,8 @@ require 'val.php';
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input type="text" id="searchInput" placeholder="Search for food..." />
             </div>
-            <div class="burger--icons">
-                <i class="fa-solid fa-bars" id="toggle-sidebar"></i>
+            <div class="auth">
+                <a class="logout" href="logout.php" class="login-btn">Logout</a>
             </div>
             <div class="menu--icons">
                 <i class="fa-solid fa-bowl-food"></i>
@@ -158,9 +158,8 @@ require 'val.php';
                     <span>0</span>
                 </div>
             </div>
-            <div class="auth">
-                <!-- Tombol Login atau Logout -->
-                <a class="logout" href="logout.php" class="login-btn">Logout</a>
+            <div class="burger--icons">
+                <i class="fa-solid fa-bars" id="toggle-sidebar"></i>
             </div>
         </nav>
     </header>
@@ -360,54 +359,48 @@ require 'val.php';
         </div>
     </div>
 
-    <!-- Modal Form Pembayaran dan Alamat -->
     <div id="checkoutFormModal" class="checkout-modal">
-        <div class="checkout-modal-content">
-            <span class="close-btn" id="closeModal">&times;</span>
-            <h2>Billing Information</h2>
-            
-            <!-- Form Pembayaran dan Alamat -->
-            <form id="paymentForm" method="post">
-                <!-- Alamat Pengiriman -->
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+    <div class="checkout-modal-content">
+        <span class="close-btn" id="closeModal">&times;</span>
+        <h2>Informasi Pemesanan</h2>
+
+        <!-- Form Pembayaran dan Alamat -->
+        <div class="checkout-container">
+            <form method="POST" action="checkout.php" class="checkout-form">
+                <div class="form-element">
+                    <label for="full-name">Nama Lengkap</label>
+                    <input type="text" name="full-name" id="full-name" required>
                 </div>
-                <div class="form-group">
-                    <label for="address">Address</label>
-                    <input type="text" id="address" name="address" required placeholder="Enter your address">
+                <div class="form-element">
+                    <label for="user-email">Email Address</label>
+                    <input type="email" name="user-email" id="user-email" value="<?php echo $_SESSION['user_email']; ?>" required>
                 </div>
-                <div class="form-group">
-                    <label for="city">City</label>
-                    <input type="text" id="city" name="city" required placeholder="Enter your city">
+                <div class="form-element">
+                    <label for="delivery-address">Alamat pengiriman</label>
+                    <textarea name="delivery-address" id="delivery-address" required></textarea>
                 </div>
-                <div class="form-group">
-                    <label for="state">State/Province</label>
-                    <input type="text" id="state" name="state" required placeholder="Enter your state">
+                <div class="form-element">
+                    <label for="phone-number">Nomor telpon</label>
+                    <input type="number" name="phone-number" id="phone-number" required>
                 </div>
-                <div class="form-group">
-                    <label for="postalCode">Postal Code</label>
-                    <input type="text" id="postalCode" name="postalCode" required placeholder="Enter your postal code">
-                </div>
-                
-                <!-- Payment Method -->
-                <div class="form-group">
-                    <label for="paymentMethod">Payment Method</label>
-                    <select id="paymentMethod" name="paymentMethod" required>
-                        <option value="creditCard">Credit Card</option>
-                        <option value="dana">DANA</option>
-                        <option value="bankTransfer">Bank Transfer</option>
+                <div class="form-element">
+                    <label for="payment-method">Payment Method</label>
+                    <select name="payment-method" id="payment-method" required>
+                        <option value="Qris">Qris</option>
+                        <option value="DANA">DANA</option>
+                        <option value="bank-transfer">Bank Transfer</option>
                     </select>
                 </div>
-                
-                <button type="submit" class="btn btn-primary">Submit Payment</button>
+                <button type="submit" name="submit-checkout">Submit Checkout</button>
             </form>
         </div>
     </div>
+</div>
+
     <footer class="custom-footer py-4 bg-light mt-auto">
     <div class="container-fluid">
         <div class="d-flex align-items-center justify-content-between small">
-            <div class="text-muted">Copyright &copy; RA144.QuickBite 2024 STT WASTUKANCANA 2024</div>
+            <div class="text-muted">Copyright &copy; RA.QuickBite 2024 STT WASTUKANCANA 2024</div>
         </div>
     </div>
 </footer>

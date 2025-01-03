@@ -4,7 +4,7 @@ session_start();
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "login-db";
+$dbname = "quickbite_db";
 
 $con = new mysqli($servername, $username, $password, $dbname);
 

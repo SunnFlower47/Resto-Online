@@ -384,6 +384,104 @@ body {
     }
 }
 
+/* Modal Styles */
+.checkout-modal {
+    display: none; /* Awalnya modal tersembunyi */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Latar belakang semi transparan */
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkout-modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.checkout-modal-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Form Styles */
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-element {
+    margin-bottom: 10px;
+}
+
+.form-element label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-element input,
+.form-element textarea,
+.form-element select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+button[type="submit"] {
+    padding: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Responsif untuk perangkat kecil */
+@media (max-width: 768px) {
+    .checkout-modal-content {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .form-element input,
+    .form-element textarea,
+    .form-element select {
+        padding: 10px;
+    }
+
+    button[type="submit"] {
+        padding: 12px;
+    }
+}
 
 @media (max-width: 480px) {
     .cover {
@@ -459,3 +557,4 @@ main {
     }
 }
 }
+
