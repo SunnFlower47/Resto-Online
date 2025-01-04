@@ -10,7 +10,7 @@ require 'val.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bliss Burger</title>
+    <title>Quick Bite</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <!-- Font Awesome Icons -->
     <link
