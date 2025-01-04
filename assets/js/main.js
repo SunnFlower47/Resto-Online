@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     const addToCartButtons = document.querySelectorAll('.add-to-cart');
     const cartItemCount = document.querySelector('.cart-icon span');
-    const cartItemsList = document.querySelector('.cart-menu .cart-items');
+    const cartItemsList = document.querySelector('.cart-items');
     const cartTotal = document.querySelector('.cart-total');
     const sidebar = document.getElementById('sidebar');
     const burgerIcon = document.querySelector('.burger--icons i');
-    const sidebarClose = document.querySelector('.sidebar-close i');
+    const sidebarClose = document.getElementById('close-sidebar');
 
     let cartItems = []; 
     let totalAmount = 0;
@@ -37,44 +37,39 @@ document.addEventListener('DOMContentLoaded', () => {
                 cartItems.push(item);
             }
 
-            totalAmount += item.price;
-            updateCartUI();
+            updateCart();
         });
     });
 
-    function updateCartUI() {
-        updateCartItemCount(cartItems.length);
-        updateCartItemList();
-        updateCartTotal();
-    }
+    function updateCart() {
+        cartItemsList.innerHTML = '';
+        totalAmount = 0;
 
-    function updateCartItemCount(count) {
-        cartItemCount.textContent = count;
-    }
-
-    function updateCartItemList() {
-        cartItemsList.innerHTML = ''; 
-        cartItems.forEach((item) => {
+        cartItems.forEach((item, index) => {
             const cartItem = document.createElement('div');
             cartItem.classList.add('cart-item');
             cartItem.innerHTML = `
                 <span>${item.name}</span>
+                <span>Rp.${(item.price * 1000).toLocaleString('id-ID', { minimumFractionDigits: 0})}</span>
                 <span>Qty: ${item.quantity}</span>
-                <span>Rp.${(item.price * item.quantity).toLocaleString()}</span>
+                <button class="remove-item" data-index="${index}">' X '</button>
             `;
             cartItemsList.appendChild(cartItem);
-        });
-    }
 
-    function updateCartTotal() {
-        const formattedTotal = totalAmount.toLocaleString('id-ID', {
-            style: 'currency',
-            currency: 'IDR',
-            minimumFractionDigits: 3,
-            maximumFractionDigits: 3,  
+            totalAmount += item.price * item.quantity;
         });
-    
-        cartTotal.textContent = formattedTotal;  
+
+        cartItemCount.textContent = cartItems.length;
+        cartTotal.textContent = `Rp.${(totalAmount * 1000).toLocaleString('id-ID', { minimumFractionDigits: 2 })}`;
+
+        const removeButtons = document.querySelectorAll('.remove-item');
+        removeButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                const index = e.target.getAttribute('data-index');
+                cartItems.splice(index, 1);
+                updateCart();
+            });
+        });
     }
     
 
