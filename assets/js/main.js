@@ -11,11 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let totalAmount = 0;
 
     burgerIcon.addEventListener('click', () => {
-        sidebar.classList.add('open'); // Buka sidebar
+        sidebar.classList.add('open'); 
     });
 
     sidebarClose.addEventListener('click', () => {
-        sidebar.classList.remove('open'); // Tutup sidebar
+        sidebar.classList.remove('open'); 
     });
     
 
@@ -67,7 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function updateCartTotal() {
-        // Format totalAmount menjadi Rp dengan 3 digit nol di belakang
         const formattedTotal = totalAmount.toLocaleString('id-ID', {
             style: 'currency',
             currency: 'IDR',
@@ -79,7 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
 
-    // Fungsi pencarian
     const searchInput = document.getElementById('searchInput');
     const menuItems = document.querySelectorAll('.card');
 
