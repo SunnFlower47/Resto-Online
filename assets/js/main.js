@@ -7,10 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const burgerIcon = document.querySelector('.burger--icons i');
     const sidebarClose = document.querySelector('.sidebar-close i');
 
-    let cartItems = []; // Array menyimpan item di keranjang
+    let cartItems = []; 
     let totalAmount = 0;
 
-    // === Fungsi Toggle Sidebar ===
     burgerIcon.addEventListener('click', () => {
         sidebar.classList.add('open'); // Buka sidebar
     });
@@ -18,8 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
     sidebarClose.addEventListener('click', () => {
         sidebar.classList.remove('open'); // Tutup sidebar
     });
+    
 
-    // === Fungsi Tambah ke Keranjang ===
     addToCartButtons.forEach((button, index) => {
         button.addEventListener('click', () => {
             const card = button.closest('.card');
@@ -43,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // === Fungsi Update UI ===
     function updateCartUI() {
         updateCartItemCount(cartItems.length);
         updateCartItemList();
@@ -55,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function updateCartItemList() {
-        cartItemsList.innerHTML = ''; // Bersihkan item lama
+        cartItemsList.innerHTML = ''; 
         cartItems.forEach((item) => {
             const cartItem = document.createElement('div');
             cartItem.classList.add('cart-item');

@@ -1,4 +1,3 @@
-/* Import Google Font cdn link */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,800&display=swap');
 
 :root {
@@ -22,14 +21,28 @@
 
 body {
     background: #fff;
-    padding: 0 9%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
-/* Header section */
+main {
+    flex-grow: 1; 
+    padding-top: 80px; 
+}
+
 .header {
     display: flex;
-    justify-content: space-between;
-    padding: 20px;
+    justify-content: center;
+    padding: 20px 9%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 .auth button {
@@ -45,12 +58,12 @@ body {
     background-color: #45a049;
 }
 
-
 .header--menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+    width: 100%; /* memastikan menu mengambil lebar penuh */
 }
 
 .burger--icons i {
@@ -59,6 +72,9 @@ body {
     color: var(--accent-color);
     border-radius: 5px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .search--box {
@@ -465,7 +481,7 @@ button[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-/* Responsif untuk perangkat kecil */
+
 @media (max-width: 768px) {
     .checkout-modal-content {
         width: 90%;
@@ -537,15 +553,6 @@ button[type="submit"]:hover {
 }
 
 
-body {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
-
-main {
-    flex-grow: 1; 
-
 @media (max-width: 768px) {
     .custom-footer .d-flex {
         flex-direction: column;  
@@ -556,5 +563,9 @@ main {
         margin-bottom: 10px; 
     }
 }
-}
 
+
+.main-content {
+    padding-top: 80px; 
+    padding: 0 9%;
+}

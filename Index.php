@@ -10,7 +10,7 @@ require 'val.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quick Bite</title>
+    <title>Bliss Burger</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <!-- Font Awesome Icons -->
     <link
@@ -182,8 +182,8 @@ require 'val.php';
     </div>
 </section>
 
-    <!-- Main Content -->
-    <main>
+<div class="main-content">
+<main>
         <!-- Food Menu Section -->
         <h2 class="section-heading">Food Menu</h2>
         <div class="menu--list">
@@ -396,35 +396,37 @@ require 'val.php';
         </div>
     </div>
 </div>
+</div>
+</div>
+
+    
 
     <footer class="custom-footer py-4 bg-light mt-auto">
     <div class="container-fluid">
         <div class="d-flex align-items-center justify-content-between small">
-            <div class="text-muted">Copyright &copy; RA.QuickBite 2024 STT WASTUKANCANA 2024</div>
+            <div class="text-muted">Copyright &copy; QuickBite 2024 STT WASTUKANCANA TEKNIK INFORMATIKA 2024</div>
         </div>
     </div>
 </footer>
 
-    <!-- Scripts -->
     <script src="assets/js/main.js"></script>
 
     <script>
-        // Ambil elemen modal dan tombol
         var checkoutModal = document.getElementById('checkoutFormModal');
         var checkoutBtn = document.querySelector('.checkout-btn');
         var closeModalBtn = document.getElementById('closeModal');
 
-        // Ketika tombol Checkout diklik, tampilkan modal
+        
         checkoutBtn.addEventListener('click', function() {
             checkoutModal.style.display = 'block';
         });
 
-        // Ketika tombol Close (X) diklik, sembunyikan modal
+    
         closeModalBtn.addEventListener('click', function() {
             checkoutModal.style.display = 'none';
         });
 
-        // Jika area di luar modal diklik, sembunyikan modal
+
         window.onclick = function(event) {
             if (event.target == checkoutModal) {
                 checkoutModal.style.display = 'none';
