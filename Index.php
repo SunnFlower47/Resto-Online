@@ -12,13 +12,11 @@ require 'val.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bliss Burger</title>
     <link rel="stylesheet" href="assets/css/style.css" />
-    <!-- Font Awesome Icons -->
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
     <style>
-        /* Styling tambahan untuk sidebar dan input search */
         .sidebar {
             position: fixed;
             right: -300px;
@@ -70,7 +68,7 @@ require 'val.php';
             cursor: pointer;
         }
 
-        /* Modal CSS */
+        
         .checkout-modal {
             position: fixed;
             top: 0;
@@ -78,7 +76,7 @@ require 'val.php';
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, 0.5);
-            display: none; /* Sembunyikan modal secara default */
+            display: none; 
             z-index: 1000;
         }
 
@@ -138,7 +136,7 @@ require 'val.php';
     </style>
 </head>
 <body>
-    <!-- Header Section -->
+   
     <header class="header">
         <nav class="header--menu">
             <div class="logo">Quick<span>Bite</span></div>
@@ -164,7 +162,7 @@ require 'val.php';
         </nav>
     </header>
 
-    <!-- Cover Section -->
+    
     <section class="cover">
     <div class="cover--overlay">
         <br>
@@ -184,7 +182,7 @@ require 'val.php';
 
 <div class="main-content">
 <main>
-        <!-- Food Menu Section -->
+  
         <h2 class="section-heading">Food Menu</h2>
         <div class="menu--list">
             <div class="menu--item">
@@ -237,10 +235,10 @@ require 'val.php';
             </div>
         </div>
 
-        <!-- Menu Items Section -->
+     
         <h2 class="section-heading">Menu Items</h2>
         <div class="card--list">
-            <!-- Example Card -->
+        
             <div class="card">
                 <img src="assets/image/food.jpg" alt="img" />
                 <h4 class="card--title">Salad</h4>
@@ -340,7 +338,7 @@ require 'val.php';
         </div>
     </main>
 
-    <!-- Sidebar -->
+  
     <div class="sidebar" id="sidebar">
         <div class="sidebar-close" id="close-sidebar">
             <i class="fa-solid fa-close"></i>

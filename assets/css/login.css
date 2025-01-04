@@ -1,4 +1,4 @@
-/* Login Page Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa; /* Latar belakang putih */
+    background-color: #f8f9fa; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,8 +36,7 @@ h2 {
     font-size: 24px;
     margin-bottom: 20px;
     font-weight: bold;
-    color: #000000; /* Merah */
-    
+    color: #000000; 
 }
 
 
