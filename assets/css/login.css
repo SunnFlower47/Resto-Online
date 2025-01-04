@@ -23,13 +23,13 @@ body {
 }
 
 .login-box {
-    background-color: #ffffff; /* Warna putih untuk kotak login */
+    background-color: #ffffff; 
     width: 350px;
     padding: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     text-align: center;
-    border: 2px solid #dc3545; /* Garis tepi merah */
+    border: 2px solid #dc3545; 
 }
 
 h2 {
@@ -42,7 +42,7 @@ h2 {
 
 
 h2 .ku {
-    color: #f44336; /* Merah lebih terang untuk bagian 'Ku' */
+    color: #f44336; 
 }
 
 .textbox {
@@ -60,9 +60,8 @@ h2 .ku {
 
 .textbox input:focus {
     outline: none;
-    border-color: #dc3545; /* Fokus merah */
+    border-color: #dc3545; 
 }
-
 .checkbox {
     display: flex;
     align-items: center;
@@ -86,7 +85,7 @@ h2 .ku {
 
 .forgot-password {
     font-size: 14px;
-    color: #dc3545; /* Merah */
+    color: #dc3545; 
     text-decoration: none;
 }
 
@@ -95,7 +94,7 @@ h2 .ku {
 }
 
 .btn-submit {
-    background-color: #dc3545; /* Merah */
+    background-color: #dc3545; 
     color: #fff;
     padding: 10px 20px;
     font-size: 16px;
@@ -106,7 +105,7 @@ h2 .ku {
 }
 
 .btn-submit:hover {
-    background-color: #c82333; /* Merah lebih gelap untuk hover */
+    background-color: #c82333; 
 }
 
 .register {
@@ -119,7 +118,7 @@ h2 .ku {
 }
 
 .register a {
-    color: #dc3545; /* Merah */
+    color: #dc3545; 
     text-decoration: none;
 }
 
@@ -128,8 +127,8 @@ h2 .ku {
 }
 
 .error-message {
-    background-color: #f8d7da; /* Latar belakang merah muda */
-    color: #721c24; /* Teks merah */
+    background-color: #f8d7da; 
+    color: #721c24; 
     padding: 10px;
     margin-bottom: 15px;
     border-radius: 5px;
